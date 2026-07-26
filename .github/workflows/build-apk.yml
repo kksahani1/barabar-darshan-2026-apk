@@ -13,24 +13,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 1. Zip से गायब gradle और catalog फाइलों को एक्सट्रैक्ट करें
-      - name: Extract Missing Catalog & Dependencies
+      # 1. Zip से गायब फाइलों को एक्सट्रैक्ट करें
+      - name: Extract Project Files
         run: |
           if [ -f "barabar-darshan-2026 (2).zip" ]; then
             echo "Extracting complete project files from zip..."
             unzip -o "barabar-darshan-2026 (2).zip"
-          fi
-
-      # 2. सुनिश्चित करें कि app और gradle फोल्डर सही स्थान पर हैं
-      - name: Align Directory Structure
-        run: |
-          if [ ! -d "gradle" ]; then
-            GRADLE_DIR=$(find . -maxdepth 3 -type d -name "gradle" | head -n 1)
-            if [ -n "$GRADLE_DIR" ]; then
-              PROJECT_DIR=$(dirname "$GRADLE_DIR")
-              echo "Restoring gradle catalog from $PROJECT_DIR..."
-              cp -r $PROJECT_DIR/* .
-            fi
           fi
 
       - name: Set up JDK 17
@@ -39,6 +27,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
+
+      # 2. अगर gradle-wrapper.jar गायब है, तो सिस्टम के Gradle से इसे तुरंत री-जनरेट करें
+      - name: Regenerate Gradle Wrapper
+        run: |
+          if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
+            echo "Gradle wrapper jar missing. Regenerating..."
+            gradle wrapper
+          fi
 
       - name: Grant Execute Permission for Gradlew
         run: chmod +x gradlew
