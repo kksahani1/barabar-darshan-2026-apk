@@ -1,0 +1,8 @@
+{
+  "name": "Barabar Darshan 2026",
+  "description": "बराबर दर्शन 2026 - जिला प्रशासन जहानाबाद (Bihar Government) official web app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
