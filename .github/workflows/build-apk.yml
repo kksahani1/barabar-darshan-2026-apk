@@ -28,12 +28,17 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      # 2. डमी debug.keystore फ़ाइल बनाएँ (ताकि signing validation पास हो जाए)
+      - name: Generate Dummy Debug Keystore
+        run: |
+          keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+
       - name: Create Dummy .env File
         run: |
           touch .env
           echo "GEMINI_API_KEY=YOUR_API_KEY_HERE" >> .env
 
-      # 2. सीधे सिस्टम के 'gradle' से बिल्ड करें (wrapper jar की ज़रूरत खत्म)
+      # 3. APK बिल्ड करें
       - name: Build Debug APK
         run: gradle assembleDebug --no-configuration-cache --stacktrace
 
