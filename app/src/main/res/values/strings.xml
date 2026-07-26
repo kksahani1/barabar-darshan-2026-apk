@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Barabar Darshan 2026</string>
+    <string name="subtitle_text">जिला प्रशासन जहानाबाद - बिहार सरकार</string>
+    <string name="loading">लोड हो रहा है…</string>
+    <string name="error_title">कनेक्शन त्रुटि</string>
+    <string name="error_message">वेब पेज लोड करने में विफल। कृपया अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें।</string>
+    <string name="retry">पुनः प्रयास करें</string>
+    <string name="open_in_browser">ब्राउज़र में खोलें</string>
+</resources>
