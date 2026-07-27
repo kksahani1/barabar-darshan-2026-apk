@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Gold Ring -->
+    <path
+        android:fillColor="#D87800"
+        android:pathData="M54,54m-38,0a38,38 0 1,1 76,0a38,38 0 1,1 -76,0" />
+    <!-- Inner Yellow Ring -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M54,54m-34,0a34,34 0 1,1 68,0a34,34 0 1,1 -68,0" />
+    <!-- Cream Base Circle -->
+    <path
+        android:fillColor="#FFFDF0"
+        android:pathData="M54,54m-27,0a27,27 0 1,1 54,0a27,27 0 1,1 -54,0" />
+    <!-- Red Central Ring -->
+    <path
+        android:fillColor="#B31212"
+        android:pathData="M54,54m-16,0a16,16 0 1,1 32,0a16,16 0 1,1 -32,0" />
+    <!-- Inner White Circle for Tree Symbol -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54m-14,0a14,14 0 1,1 28,0a14,14 0 1,1 -28,0" />
+    <!-- Banyan Tree Symbol (Bihar Emblem) in Red -->
+    <path
+        android:fillColor="#B31212"
+        android:pathData="M52,60h4v-8h-4z M54,43c-1.5,-2 -4,-3 -6,-3c1.5,1.5 2,3.5 2,5c-2,-1 -4,-1.5 -5,-0.5c1.5,1 2.5,2.5 2.5,4c-2,0 -3.5,1 -3.5,2.5c2,0 3.5,1 4,2h12c0.5,-1 2,-2 4,-2c0,-1.5 -1.5,-2.5 -3.5,-2.5c0,-1.5 1,-3 2.5,-4c-1,-1 -3,-0.5 -5,0.5c0,-1.5 0.5,-3.5 2,-5c-2,0 -4.5,1 -6,3z" />
+    <!-- Swastika Motifs -->
+    <path
+        android:fillColor="#B31212"
+        android:pathData="M43,49h2v2h2v-4h-2v1h-2z M61,49h-2v2h-2v-4h2v1h2z" />
+    <!-- Outer Stars -->
+    <path
+        android:fillColor="#D87800"
+        android:pathData="M24,54l1.2,2.4 2.6,0.4 -1.9,1.8 0.4,2.6 -2.3,-1.2 -2.3,1.2 0.4,-2.6 -1.9,-1.8 2.6,-0.4z" />
+    <path
+        android:fillColor="#D87800"
+        android:pathData="M84,54l1.2,2.4 2.6,0.4 -1.9,1.8 0.4,2.6 -2.3,-1.2 -2.3,1.2 0.4,-2.6 -1.9,-1.8 2.6,-0.4z" />
+</vector>
